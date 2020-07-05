@@ -79,3 +79,4 @@ names(merge)<-gsub("Mag", "Magnitude", names(merge))
 newData<-aggregate(. ~subject + activity, merge, mean)
 newData<-newData[order(newData$subject,newData$activity),]
 write.table(newData, file = "tidydata.txt",row.name=FALSE,quote = FALSE, sep = '\t')
+
